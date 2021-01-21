@@ -1,0 +1,12 @@
+[package]
+name = "nakama-rust-gen"
+version = "0.1.0"
+authors = ["max <harumaxy@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.0.2", features = ["rt-multi-thread", "time", "fs", "macros", "net"] }
+tonic = "0.4"
+prost = "0.7"
