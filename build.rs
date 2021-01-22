@@ -2,8 +2,8 @@ fn main() {
     let import_paths = &[
         "nakama/apigrpc",
         "nakama/vendor",
-        "nakama/build/grpc-gateway-v2.0.1/third_party/googleapis",
         "nakama/vendor/github.com/grpc-ecosystem/grpc-gateway/v2",
+        "nakama/build/grpc-gateway-v2.0.1/third_party/googleapis",
     ];
 
     let protos = &[
