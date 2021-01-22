@@ -1,4 +1,0 @@
-#[tokio::main]
-fn main() {
-    ()
-}
