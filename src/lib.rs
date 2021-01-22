@@ -1,3 +1,13 @@
+pub mod google {
+    pub mod api {
+        include!("gen/google.api.rs");
+    }
+}
+
+pub mod grpc_gateway_protoc_gen_openapiv2_options {
+    include!("gen/grpc.gateway.protoc_gen_openapiv2.options.rs");
+}
+
 pub mod nakama {
     pub mod api {
         include!("gen/nakama.api.rs");
