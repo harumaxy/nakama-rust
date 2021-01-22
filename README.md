@@ -1,6 +1,6 @@
 # rust-nakama-gen
 
-Generate gRPC client code for Nakama Server.
+gRPC client code for Nakama Server.
 
 Using [hyperium/tonic](https://github.com/hyperium/tonic/issues?q=import).
 

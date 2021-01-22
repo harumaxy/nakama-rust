@@ -1,8 +1,16 @@
 [package]
 name = "nakama-rust-gen"
+description = "gRPC client code for Nakama Server."
 version = "0.1.0"
 authors = ["max <harumaxy@gmail.com>"]
 edition = "2018"
+homepage = "https://github.com/harumaxy/nakama-rust-gen"
+repository = "https://github.com/harumaxy/nakama-rust-gen"
+readme = "README.md"
+exclude = ["src/gen/*"]
+include = ["src/nakama/*", "src/lib.rs", "Cargo.toml"]
+license = "MIT"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
