@@ -1,4 +1,4 @@
-# rust-nakama-gen
+# nakama-rust-gen
 
 gRPC client code for Nakama Server.
 
