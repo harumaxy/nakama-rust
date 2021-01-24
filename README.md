@@ -8,13 +8,13 @@ Using [hyperium/tonic](https://github.com/hyperium/tonic/issues?q=import).
 
 # Usage
 
-See example `tests/auth.rs`
+See example `tests/`
 
 ```toml
 [dependencies]
 rust-nakama-gen = "0.1"
 tonic = "0.4"
-tokio = { version = "1.0.2", features = ["rt-multi-thread", "time", "fs", "macros", "net"] }
+tokio = { version = "1.0.2", features = ["rt-multi-thread", "macros"] }
 ```
 
 # Update
