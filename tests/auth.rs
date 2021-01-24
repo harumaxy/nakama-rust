@@ -1,32 +1,14 @@
-use nakama_rust_gen::nakama::api::{
-    nakama_client::NakamaClient, AccountDevice, AccountEmail, AuthenticateDeviceRequest,
-    AuthenticateEmailRequest, Session,
-};
-use tonic::{transport::Channel, Request, Response, Status};
+use nakama_rust_gen::nakama::api::{AccountDevice, AuthenticateDeviceRequest};
+use tonic::Request;
 
-pub async fn email_authenticate(
-    client: &mut NakamaClient<Channel>,
-) -> Result<Response<Session>, Status> {
-    let email_auth_request = Request::new(AuthenticateEmailRequest {
-        create: Some(true),
-        account: Some(AccountEmail {
-            email: "harumaxy@gmail.com".into(),
-            password: "passw0rd".into(),
-            ..Default::default()
-        }),
-        username: "max".into(),
-    });
-
-    let response = client.authenticate_email(email_auth_request).await;
-    response
-}
+mod test_utils;
 
 #[tokio::test]
 async fn email_authenticate_test() {
     let mut client = nakama_rust_gen::util::connect_with_server_key(None, None)
         .await
         .unwrap();
-    let response = email_authenticate(&mut client).await;
+    let response = test_utils::email_authenticate(&mut client).await;
 
     assert!(response
         .map(|session| println!("Ok： {:?}", session))
