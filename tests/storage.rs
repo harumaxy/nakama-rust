@@ -2,11 +2,10 @@
 extern crate serde;
 extern crate serde_json;
 
-use nakama_rust_gen::nakama::api::{
+use nakama_rust::nakama::api::{
     DeleteStorageObjectId, DeleteStorageObjectsRequest, ReadStorageObjectId,
     ReadStorageObjectsRequest, WriteStorageObject, WriteStorageObjectsRequest,
 };
-use serde::__private::de;
 
 mod test_utils;
 

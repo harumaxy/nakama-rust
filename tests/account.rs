@@ -1,4 +1,4 @@
-use nakama_rust_gen::nakama::api::{GetUsersRequest, UpdateAccountRequest};
+use nakama_rust::nakama::api::{GetUsersRequest, UpdateAccountRequest};
 
 mod test_utils;
 

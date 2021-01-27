@@ -1,4 +1,4 @@
-# nakama-rust-gen
+# nakama-rust
 
 gRPC client code for Nakama Server.
 
@@ -12,7 +12,7 @@ See example `tests/`
 
 ```toml
 [dependencies]
-rust-nakama-gen = "0.1"
+nakama-rust = "0.1"
 tonic = "0.4"
 tokio = { version = "1.0.2", features = ["rt-multi-thread", "macros"] }
 ```
@@ -22,7 +22,7 @@ tokio = { version = "1.0.2", features = ["rt-multi-thread", "macros"] }
 Depends on [heroiclabs/nakama](https://github.com/heroiclabs/nakama) as git submoudle.
 
 ```sh
-git clone https://github.com/harumaxy/nakama-rust-gen.git
+git clone https://github.com/harumaxy/nakama-rust.git
 git submodule update
 cargo build
 ```

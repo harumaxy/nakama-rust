@@ -1,5 +1,5 @@
-use nakama_rust_gen::nakama::api::Session;
-use nakama_rust_gen::{
+use nakama_rust::nakama::api::Session;
+use nakama_rust::{
     nakama::api::{nakama_client::NakamaClient, AccountEmail, AuthenticateEmailRequest},
     util::connect_with_session_token,
 };
@@ -24,7 +24,7 @@ pub async fn email_authenticate(
 }
 
 pub async fn make_session_client() -> Result<NakamaClient<Channel>, tonic::transport::Error> {
-    let mut client = nakama_rust_gen::util::connect_with_server_key(None, None)
+    let mut client = nakama_rust::util::connect_with_server_key(None, None)
         .await
         .unwrap();
     let session = email_authenticate(&mut client).await.unwrap().into_inner();

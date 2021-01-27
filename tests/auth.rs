@@ -1,11 +1,11 @@
-use nakama_rust_gen::nakama::api::{AccountDevice, AuthenticateDeviceRequest};
+use nakama_rust::nakama::api::{AccountDevice, AuthenticateDeviceRequest};
 use tonic::Request;
 
 mod test_utils;
 
 #[tokio::test]
 async fn email_authenticate_test() {
-    let mut client = nakama_rust_gen::util::connect_with_server_key(None, None)
+    let mut client = nakama_rust::util::connect_with_server_key(None, None)
         .await
         .unwrap();
     let response = test_utils::email_authenticate(&mut client).await;
@@ -29,7 +29,7 @@ async fn device_authenticate() {
         }),
     });
 
-    let mut client = nakama_rust_gen::util::connect_with_server_key(None, None)
+    let mut client = nakama_rust::util::connect_with_server_key(None, None)
         .await
         .unwrap();
     let response = client.authenticate_device(device_auth_request).await;
