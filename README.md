@@ -1,4 +1,4 @@
-# Deprecated
+# [Deprecated] nakama-rust
 
 Use official implementation `nakama-rs`.
 
